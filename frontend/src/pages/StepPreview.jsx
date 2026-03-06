@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-const BASE = "http://localhost:5000";
+const BASE = import.meta.env.VITE_API_URL || "https://generador-diplomas.onrender.com";
 
 const PROVIDERS = [
   {

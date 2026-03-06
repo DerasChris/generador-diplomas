@@ -9,8 +9,8 @@ export default function UploadTemplate({ setTemplate }) {
     if (!file) return;
     const formData = new FormData();
     formData.append("template", file);
-    const res = await axios.post("http://localhost:5000/upload-template", formData);
-    setTemplate("http://localhost:5000/uploads/" + res.data.file);
+    const res = await axios.post("https://generador-diplomas.onrender.com/upload-template", formData);
+    setTemplate("https://generador-diplomas.onrender.com/uploads/" + res.data.file);
     setFileName(file.name);
   };
 
